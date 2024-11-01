@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import { ZodSchema } from "zod";
-
 const validate =
   (schema: ZodSchema<unknown>) =>
   (req: Request, res: Response, next: NextFunction) => {
@@ -13,5 +12,4 @@ const validate =
       next(error);
     }
   };
-
 export default validate;

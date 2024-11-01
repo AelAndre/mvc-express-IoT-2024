@@ -16,7 +16,7 @@ export const getStudents = async (req: Request, res: Response) => {
     const students = await findAll(limit, offset);
     res.status(200).json(students);
   } catch (error) {
-    res.status(400).json({ message: "Error al obtener alumnos", error });
+    res.status(500).json({ mensaje: "Error al obtener alumnos", error });
   }
 };
 

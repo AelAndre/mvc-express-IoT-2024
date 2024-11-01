@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-
 const unknownError = (
   err: Error,
   req: Request,
@@ -14,5 +13,4 @@ const unknownError = (
     message: "Error interno del servidor",
   });
 };
-
 export default unknownError;

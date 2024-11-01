@@ -5,7 +5,7 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 
 export default [
   { ignores: ["dist/"] },
-  { files: ["**/*.{js,ts,jsx,tsx}"] },
+  { files: ["src/**/*.{js,ts,jsx,tsx}"] },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,

@@ -2,6 +2,7 @@ import pool from "../db";
 import { ResultSetHeader, RowDataPacket } from "mysql2/promise";
 import { PaginatedStudent, Student } from "../interfaces/student";
 
+// Obtener todos los alumnos
 export const findAllStudents = async (
   limit: number,
   offset: number,
@@ -10,6 +11,7 @@ export const findAllStudents = async (
     "SELECT * FROM students LIMIT ? OFFSET ?",
     [limit, offset],
   );
+
   // Consulta para obtener el total de registros
   const [totalRows] = (await pool.query(
     "SELECT COUNT(*) as count FROM students",
