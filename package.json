@@ -16,7 +16,7 @@
     "eslint",
     "prettier"
   ],
-  "author": "Alfredo Alejandro Soto Herrera",
+  "author": "Evan André Santana Pacheco",
   "license": "MIT",
   "description": "Proyecto completo con express para la materia IoT 2024",
   "dependencies": {
