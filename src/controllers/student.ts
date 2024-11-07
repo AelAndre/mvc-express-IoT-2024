@@ -23,6 +23,11 @@ export const getStudents = async (req: Request, res: Response) => {
 export const createStudent = async (req: Request, res: Response) => {
   try {
     const student: Student = req.body;
+    const newStudent = await insert(student);
+
+    // Emit event via WebSocket
+    const io = req.app.get("io");
+    io.emit("newStudentData", newStudent);
     await insert(student);
     res.status(201).json({ message: "Alumno creado exitosamente" });
   } catch (error) {
